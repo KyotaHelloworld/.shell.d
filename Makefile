@@ -11,5 +11,5 @@ REPODIR:=$(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 apply: ## rc file を変更し、このディレクトリの設定を適用させる
 	mkdir ${REPODIR}/youroriginal
 	cp -bp ~/.zshrc ${REPODIR}/youroriginal/
-	cp ${REPODIR}/zsh/.zshrc ~/.zshrc
+	cp ${REPODIR}/homeshellrc/.zshrc ~/.zshrc
 	
