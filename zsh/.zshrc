@@ -1,7 +1,6 @@
-SHELLDIR=$(dirname $0)
+SHELLDIR=$(dirname $(dirname $0))
 THISDIR=$SHELLDIR/zsh
 
-return
 # Alias
 ## 共通
 if [ -d $SHELLDIR/aliases ]; then
