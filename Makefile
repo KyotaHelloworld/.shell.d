@@ -8,8 +8,14 @@ help:
 
 
 REPODIR:=$(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-apply: ## rc file を変更し、このディレクトリの設定を適用させる
+apply-zsh: ## .zshrc file を変更し、このディレクトリの設定を適用させる
 	mkdir -p ${REPODIR}/youroriginal
 	cp -bp ~/.zshrc ${REPODIR}/youroriginal/
 	cp ${REPODIR}/homeshellrc/.zshrc ~/.zshrc
+	
+
+apply-bash: ## .bashrc file を変更し、このディレクトリの設定を適用させる
+	mkdir -p ${REPODIR}/youroriginal
+	cp -bp ~/.bashrc ${REPODIR}/youroriginal/
+	cp ${REPODIR}/homeshellrc/.bashrc ~/.bashrc
 	
