@@ -9,4 +9,9 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 alias cd..='cd ..'
 
+alias ..l='cd .. && ls -aCF'
+alias ...l='cd ../../ && ls -aCF'
+alias ....l='cd ../../../ && ls -aCF'
+alias .....l='cd ../../../ && ls -aCF'
+
 alias CD='cd'
