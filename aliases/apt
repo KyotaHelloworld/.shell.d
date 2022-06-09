@@ -1,6 +1,6 @@
 # APT
 alias update='sudo apt -y update'
-alias upgrade='sudo apt-get -y update && sudo apt-get -y --allow-unauthenticated upgrade && sudo apt-get autoclean && sudo apt-get autoremove && exit 0'
+alias upgrade='sudo apt-get -y update && sudo apt-get -y dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove'
 alias links='links2'
 # Install and Remove Packages
 alias install='sudo apt-get -y install'
