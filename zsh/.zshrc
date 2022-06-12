@@ -7,7 +7,7 @@ if [ -d $SHELLDIR/aliases ]; then
   for file in `\find $SHELLDIR/aliases -maxdepth 2 -type f`; do
       source $file
   done
-elif [ -r $SHELLDIR/.aliases ]; then
+elif [ -r $SHELLDIR/aliases ]; then
   source $SHELLDIR/aliases
 else
   echo "[WORN] cannot find general alias file"
@@ -19,6 +19,18 @@ if [ -d $THISDIR/aliases ]; then
 elif [ -r $THISDIR/.aliases ]; then
   source $THISDIR/aliases
 fi
+
+# PATH
+if [ -d $SHELLDIR/path ]; then
+  for file in `\find $SHELLDIR/path -maxdepth 2 -type f`; do
+      source $file
+  done
+elif [ -r $SHELLDIR/path ]; then
+  source $SHELLDIR/path
+else
+  echo "[WORN] cannot find general alias file"
+fi
+
 
 
 # go
