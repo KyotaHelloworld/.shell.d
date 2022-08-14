@@ -4,18 +4,12 @@
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-
-
-
 REPODIR:=$(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 apply-zsh: ## .zshrc file を変更し、このディレクトリの設定を適用させる
-	mkdir -p ${REPODIR}/youroriginal
-	cp -bp ~/.zshrc ${REPODIR}/youroriginal/
-	cp ${REPODIR}/homeshellrc/.zshrc ~/.zshrc
-	
+	./install/put_base_rc_file.sh zsh
 
 apply-bash: ## .bashrc file を変更し、このディレクトリの設定を適用させる
-	mkdir -p ${REPODIR}/youroriginal
-	cp -bp ~/.bashrc ${REPODIR}/youroriginal/
-	cp ${REPODIR}/homeshellrc/.bashrc ~/.bashrc
-	
+	./install/put_base_rc_file.sh bash
+
+change-shell-to-zsh: ## shell を zsh に変更する
+	./install/install-zsh.sh
