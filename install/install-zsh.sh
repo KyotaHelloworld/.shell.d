@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # ①/etc/profile
 # ②~/.bash_profile

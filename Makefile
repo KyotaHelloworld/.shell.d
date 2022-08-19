@@ -9,7 +9,7 @@ apply-zsh: ## .zshrc file を変更し、このディレクトリの設定を適
 	./install/put_base_rc_file.sh zsh
 
 apply-bash: ## .bashrc file を変更し、このディレクトリの設定を適用させる
-	./install/put_base_rc_file.sh bash
+	bash ./install/put_base_rc_file.sh bash
 
 change-shell-to-zsh: ## shell を zsh に変更する
-	./install/install-zsh.sh
+	bash ./install/install-zsh.sh
