@@ -9,5 +9,4 @@ export GO111MODULE=on
 export GOPROXY=direct
 export GOSUMDB=off
 
-
 alias goupdate='git -C ~/.goenv pull'
