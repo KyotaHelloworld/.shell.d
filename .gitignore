@@ -1,6 +1,2 @@
-!.zshrc
-!.bashrc
-!.*
-original-backup
+original-backup/*
 .local
-

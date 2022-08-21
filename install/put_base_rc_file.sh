@@ -1,5 +1,5 @@
 #!/bin/bash
-script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
+put_base_rc_file_path=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 function backup () {
     shell=$1
     if [[ -z $shell ]]; then
@@ -17,15 +17,15 @@ function backup () {
         return -2
     fi
 
-    backup_dir="$script_dir/../original-backup"
+    backup_dir="$put_base_rc_file_path/../original-backup"
     mkdir -p $backup_dir
 
     if [[ -f "$HOME/$rcfile" ]]; then
-        cp -bp "$HOME/$rcfile" "$backup_dir"
+        cp -bp "$HOME/$rcfile" "$backup_dir/$rcfile.$(date +%y%m%d%_H%M%S)" # %_H : hour, space padded ( 0..23);
         rm "$HOME/$rcfile"
     fi
 
-    cp "$script_dir/base-rc-files/$rcfile" "$HOME/$rcfile"
+    cp "$put_base_rc_file_path/base-rc-files/$rcfile" "$HOME/$rcfile"
 }
 
 backup $1
