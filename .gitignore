@@ -1,2 +1,9 @@
 original-backup/*
-.local
+
+**/local*
+**/*local.*
+**/*local
+
+**/private*
+**/*private.*
+**/*private

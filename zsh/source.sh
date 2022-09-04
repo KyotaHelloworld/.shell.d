@@ -1,0 +1,1 @@
+alias rerun='source ~/.zshrc'
