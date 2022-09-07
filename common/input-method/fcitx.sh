@@ -9,3 +9,4 @@ export GTK_IM_MODULE=${GTK_IM_MODULE:-"fcitx5"}
 export XMODIFIERS=${XMODIFIERS:-"@im=fcitx5"}
 export QT_IM_MODULE=${QT_IM_MODULE:-"fcitx5"}
 
+unset fcitx_dir
