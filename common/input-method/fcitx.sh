@@ -5,8 +5,8 @@ if [[ -z $GTK_IM_MODULE ]] || [[ -z $XMODIFIERS ]] || [[ -z $QT_IM_MODULE ]] ; t
     echo "[SUGGESTION] check exporting env value in $fcitx_dir"
 fi
 
-export GTK_IM_MODULE=${GTK_IM_MODULE:-"fcitx5"}
-export XMODIFIERS=${XMODIFIERS:-"@im=fcitx5"}
-export QT_IM_MODULE=${QT_IM_MODULE:-"fcitx5"}
+export GTK_IM_MODULE=${GTK_IM_MODULE:-"fcitx"}
+export XMODIFIERS=${XMODIFIERS:-"@im=fcitx"}
+export QT_IM_MODULE=${QT_IM_MODULE:-"fcitx"}
 
 unset fcitx_dir
