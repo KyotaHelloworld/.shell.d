@@ -8,5 +8,3 @@ export PATH=$GOPATH/bin:$PATH
 export GO111MODULE=on
 export GOPROXY=direct
 export GOSUMDB=off
-
-alias goupdate='git -C ~/.goenv pull'

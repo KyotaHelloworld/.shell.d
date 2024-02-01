@@ -25,6 +25,7 @@ function goenv_update () {
     git -C ~/.goenv pull 1>/dev/null 2>&1
     if [[ $? -eq "0" ]]; then
         echo "update successfully finished."
+        goenv -v
         return 0
     fi
 }
@@ -32,10 +33,10 @@ function goenv_update () {
 function set_go_version () {
     GOENV_TARGET_GO_VERSION=$1
     if [[ -z $GOENV_TARGET_GO_VERSION ]]; then
+        echo "available Go versions are"
         goenv install -l | tail -n 5
-        echo "you can install go like using next command."
-        echo "    goenv install 1.19.3"
-        echo "    goenv global 1.19.3"
+        echo "you can install Go like using next command."
+        echo "    set_go_version 1.19.3"
         return 0
     fi
 
@@ -50,8 +51,7 @@ function set_go_version () {
     fi
 
     goenv global $GOENV_TARGET_GO_VERSION 1>/dev/null 2>&1
-    eval "$(goenv init -)"
-    export PATH=$GOPATH/bin:$PATH
+    echo "restarting shell" && rerun
     go version
 }
 
